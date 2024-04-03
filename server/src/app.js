@@ -10,9 +10,9 @@ app.use(bodyParser.json())//process json data with ease
 app.use(cors())//allow any host to acces this
 
 //This is an express command where get is a method from a list of methods we can use for an http request ,more of which are post
-app.get('/status',(req,res)=>{
+app.post('/register',(req,res)=>{
     res.send({
-        message:'hello worlds'
+        message:'Hello ${req.body.email} ! Your user was registered!! Have fun'
     })
 })
 
